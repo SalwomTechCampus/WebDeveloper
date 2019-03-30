@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>If Statment</title>
+</head>
+<body>
+	<p>What is the Weather?</p>
+		<input id="weather"/>
+		<button id="mybutton">Submit</button>
+	
+
+<script type="text/javascript">
+	
+	/*
+//we can do this 1
+	document.getElementById("mybutton").onclick=function(){
+	var z= document.getElementById("weather").value;
+		if ( z =="rain"){
+			alert("TRUE")	
+		}else {
+			alert( z );
+		}
+	}*/	
+		//Or we can do this to
+		document.getElementById("mybutton").onclick=function(){
+
+	
+		if ( document.getElementById("weather").value =="rain"){
+			alert("TRUE")	
+		}else {
+			var x= document.getElementById("weather").value;
+			alert("It is Not Rain It is " + x );
+		}
+	}
+	
+		
+</script>
+</body>
+</html>
