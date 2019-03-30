@@ -7,10 +7,31 @@
 	<title>How Many Fingers?</title>
 </head>
 <body>
-	<h2>Inter Some Numper </h2>
+	<h2>How Many Fingers Are You Holding Up </h2>
 	<input id="input"/>
 	<button id="inter"> Check </button>
 	<script type="text/javascript">
+		//while loops
+		// section3, Lecture 97
+		document.getElementById("inter").onclick=function(){
+			var gotit=false; var guesses=0; var x;
+			while (gotit==false){
+				x=Math.random();
+				x=x*6;
+				x=Math.floor(x);
+
+				if (document.getElementById("input").value==x) {
+					gotit=true;
+				}else{
+					guesses++;
+				}
+			}alert("Got it! it was a "+x+" .it only took me "+guesses+" guesses!") ;
+		}
+
+
+		/*
+		//while loops
+		// section3, Lecture 94
 		document.getElementById("inter").onclick=function(){
 
 			var x=Math.random();
@@ -23,7 +44,7 @@
 				alert("Please try agin the number was " +x );
 			}
 
-		}
+		}*/
 
 
 	</script>
