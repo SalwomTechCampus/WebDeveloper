@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>How Many Fingers?</title>
+</head>
+<body>
+	<h2>Inter Some Numper </h2>
+	<input id="input"/>
+	<button id="inter"> Check </button>
+	<script type="text/javascript">
+		document.getElementById("inter").onclick=function(){
+
+			var x=Math.random();
+			x=6*x;
+			x=Math.floor(x);
+			if (x==document.getElementById("input").value) {
+				alert("you do good job");				
+
+			}else{
+				alert("Please try agin the number was " +x );
+			}
+
+		}
+
+
+	</script>
+
+
+</body>
+</html>
