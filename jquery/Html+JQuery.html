@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery + HTML</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<style type="text/css">
+		#circle {
+        width: 200px;
+        height: 200px;
+        margin: 5em ;
+        background-color: red;
+        border-radius: 100px;
+        /*margin: 5em auto;*/
+        /*padding: 5px;*/
+    	/*position: relative;*/
+    }.square {
+        width: 200px;
+        height: 200px;
+        
+        background-color: red;
+        margin: 5em ;
+    }
+</style>
+</head>
+<body>
+	<p>this some test</p>
+	
+	<div class="square"></div>
+	<div id="circle"></div>
+	<div class="square"></div>
+
+
+	<script type="text/javascript">
+
+
+		$("#circle").hover(function(){
+			$(".square").fadeOut();
+			
+		});
+
+		$(".square").click(function(){
+			$(this).hide();
+		});
+
+</script>
+</body>
+</html>

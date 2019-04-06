@@ -1,0 +1,19 @@
+
+	#circle {
+        width: 200px;
+        height: 200px;
+        /*margin: 5em auto;*/
+        /*padding: 5px;*/
+        background-color: red;
+        /*border-radius: 0px;*/
+        position: relative;
+    }#sqir {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        /*margin: 5em auto;
+        padding: 5px;
+        
+        order-radius: 100px;*/
+    }
+    
