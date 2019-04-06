@@ -24,6 +24,8 @@
 </head>
 <body>
 	<p>this some test</p>
+	<button id="fadeout">Fade Out</button>
+	<button id="fadein">Fade in</button>
 	
 	<div class="square"></div>
 	<div id="circle"></div>
@@ -31,6 +33,21 @@
 
 
 	<script type="text/javascript">
+		$("#fadeout").click(function(){
+			$("p").fadeOut("slow",function(){
+				a();
+			});
+		})
+		function a(){
+			$("p").fadeIn(3000);
+
+		}
+		$("#fadein").click(function a(){
+			$("p").fadeIn("slow",function (){
+				
+
+			});
+		})
 
 
 		$("#circle").hover(function(){
