@@ -14,8 +14,8 @@
         /*padding: 5px;*/
     	/*position: relative;*/
     }.square {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         
         background-color: red;
         margin: 5em ;
@@ -27,12 +27,30 @@
 	<button id="fadeout">Fade Out</button>
 	<button id="fadein">Fade in</button>
 	
-	<div class="square"></div>
 	<div id="circle"></div>
-	<div class="square"></div>
 
 
 	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$("#circle").hover(function(){
+				$(this).animate({
+					width:"600px"
+					,height:"400px"
+					,margin:"0px"
+					,padding:"0px"
+					,borderRadius:"40%"
+				},1500);
+				
+			});
+			$(this).click(function(){
+			$("#circle").hide();
+		});
+		});
+
+		
+
+	/*
 		$("#fadeout").click(function(){
 			$("p").fadeOut("slow",function(){
 				a();
@@ -58,7 +76,7 @@
 		$(".square").click(function(){
 			$(this).hide();
 		});
-
+	*/
 </script>
 </body>
 </html>

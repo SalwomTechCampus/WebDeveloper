@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>How Many Fingers?</title>
-	<link rel="stylesheet" type="text/css" href="css.css"/>
-	
+	<link rel="stylesheet" type="text/css" href="css.css" />
+
 </head>
+
 <body>
 	<p> Time spent it: <span id="dateTime"></span></p>
 	<div id="circle"></div>
 
-	 <script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript">//src="scripts.js">
+
+		var clickTime; var createdTime; var reaction;
+		
+		function boxcalled() {
+			var x = Math.random()*1000;
+			//x = x * 1000;
+			setTimeout(function () {
+				
+				document.getElementById("circle").style.display = "block";
+				createdTime = Date.now();
+			}, x);
+
+
+		}
+		document.getElementById("circle").onclick = function () {
+			clickTime = Date.now();
+
+			document.getElementById("dateTime").innerHTML =(clickTime - createdTime) / 1000;
+
+			this.style.display = "none";
+
+			boxcalled();
+		}
+		boxcalled();
+
+
+	</script>
 
 
 </body>
+
 </html>
